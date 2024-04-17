@@ -1,5 +1,8 @@
 # flutter_web_twitch_auth
 
+> [!NOTE]
+> My version of flutter_web_twitch_auth repo with small update.
+
 A Flutter Web project to illustrate OAuth2 authentication flow using Twitch's API.
 
 The project on this branch is using an external popup window to manage the login with Twitch.
@@ -55,7 +58,7 @@ WidgetsBinding.instance.addPostFrameCallback((_) {
   );
   final authUrl =
     'https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=$clientId&redirect_uri=$redirectUri&scope=viewing_activity_read';
-  
+
   // Keeping a reference to the popup window so you can close it after login is completed
   _popupWin = html.window.open(
     authUrl, "Twitch Auth", "width=800, height=900, scrollbars=yes");
